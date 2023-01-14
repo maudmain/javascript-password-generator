@@ -132,22 +132,6 @@ function getPasswordOptions() {
 // // Function for getting a random element from an array
 // function getRandom(arr) {
 
-// }
-
-// Choose a random element from an array
-let lower = lowerCasedCharacters[Math.floor(Math.random()* lowerCasedCharacters.length)];
-console.log(lower);
-
-let upper = upperCasedCharacters[Math.floor(Math.random()* upperCasedCharacters.length)];
-console.log(upper);
-
-let special = specialCharacters[Math.floor(Math.random()* specialCharacters.length)];
-console.log(special);
-
-let numeric = numericCharacters[Math.floor(Math.random()* numericCharacters.length)];
-console.log(numeric)
-
-
 
 // Function to generate password with user input
 function generatePassword() {
