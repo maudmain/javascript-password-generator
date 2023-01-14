@@ -147,7 +147,31 @@ function generatePassword() {
 //create a new array that will hold the characters arrays requested
     let characterClassArray = [];
 
-// .push 
+// .push to add the characters at the end of the new array
+if (promptLowerCase) {
+    characterClassArray.push(lowerCasedCharacters);
+  }
+  if (promptUpperCase) {
+    characterClassArray.push(upperCasedCharacters);
+  }
+  if (promptSpecialCharacter) {
+    characterClassArray.push(specialCharacters);
+  }
+  if (promptNumericCharacter) {
+    characterClassArray.push(numericCharacters);
+  }
+
+  let password = "";
+  for (let i = 0; i < pwLength; i++) {
+    // choose at least from each character class in the array
+    if (i < characterClassArray.length) {
+      password += getRandom(characterClassArray[i]);
+    }
+    else {
+      password += getRandom(getRandom(characterClassArray));
+    }
+  }
+  return password;
 }
 
 
