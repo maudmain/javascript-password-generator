@@ -108,7 +108,7 @@ let password = "";
 function getPasswordOptions() {
 
   //do while loop
-  //to ensure user input is a number https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt
+  // make sure user input is a number 
 
   do {
     pwLength = (Number.parseInt(prompt("Please choose a password length between 10 and 64 characters.")));
@@ -130,12 +130,24 @@ function getPasswordOptions() {
 }
 
 // // Function for getting a random element from an array
-// function getRandom(arr) {
+function getRandom(arr) {
+    let random = (Math.floor(Math.random() * arr.length));
+    return arr[random];
+  }
+  
 
 
 // Function to generate password with user input
+// 1. we will need to link the getPasswordOptions funtion to this to be able to execute
+/* 2. we will need to create a loop that adds character until the password length is filled
+= this will be done when we run the getRandom function on the variables for the character prompts for/if */
 function generatePassword() {
+    getPasswordOptions();
 
+//create a new array that will hold the characters arrays requested
+    let characterClassArray = [];
+
+// .push 
 }
 
 
